@@ -8,8 +8,8 @@
         <div class="card shadow-sm">
             <div class="card-body p-4">
                 <h2 class="h4 mb-3">Login</h2>
-                <form action="{{ route('login.store') }}" method="POST">
-                    @csrf
+                <form action="{{ secure_url('/login') }}" method="POST">
+    @csrf
                     <div class="mb-3">
                         <label class="form-label">Email</label>
                         <input type="email" name="email" value="{{ old('email') }}" class="form-control" required>

@@ -16,12 +16,12 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
-        // ✅ ONLY ADMIN (REMOVED old admin)
+        // ✅ NEW ADMIN USER
         User::firstOrCreate(
-            ['email' => 'vraj@gmail.com'],
+            ['email' => 'admin@hogtie.com'],
             [
-                'name' => 'Vraj Admin',
-                'password' => Hash::make('kuvadiya8725'),
+                'name' => 'Hog Tie Admin',
+                'password' => Hash::make('Admin@123'),
                 'is_admin' => true,
             ]
         );
@@ -93,9 +93,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // 🧪 Test user
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        User::firstOrCreate(
+    ['email' => 'test@example.com'],
+    [
+        'name' => 'Test User',
+        'password' => Hash::make('password123'),
+        'is_admin' => false,
+    ]
+);
     }
 }

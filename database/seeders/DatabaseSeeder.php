@@ -18,10 +18,10 @@ class DatabaseSeeder extends Seeder
     {
         // ✅ NEW ADMIN USER
         User::firstOrCreate(
-            ['email' => 'admin@hogtie.com'],
+            ['email' => 'vraj@hogtie.com'],
             [
                 'name' => 'Hog Tie Admin',
-                'password' => Hash::make('Admin@123'),
+                'password' => Hash::make('vraj@8725'),
                 'is_admin' => true,
             ]
         );
